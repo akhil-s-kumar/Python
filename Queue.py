@@ -1,6 +1,6 @@
 ####### Queue Implementation #######
 
-#Devoloper : Akhil S Kumar
+#Developer : Akhil S Kumar
 #Date Created : 8/25/2019
 #https://www.github.com/akhil-s-kumar
 
@@ -31,14 +31,20 @@ while cont.lower() == "y" or cont.upper() == "Y":
             print("UnderFlow! Queue is empty!")
 
     elif m is 3:  #First element in the list
-        print("ForeMost item is ",queue[0])
+        if queue == []:
+            print("Queue is Empty")
+        else:
+            print("ForeMost item is ",queue[0])
 
     elif m is 4:  #Disply of queue
-        c = queue[:n]
+        c = queue[1:n-1]
         if c == []:
             print("Queue is Empty!")
-        for a in c:
-            print(a)
+        else:
+           print(queue[0]," <- Front end")
+           for a in c:
+                 print(a)              
+           print(queue[len(queue)-1], "<- Rear end")
             
     elif m is 5: #Exit
         break
@@ -49,4 +55,3 @@ while cont.lower() == "y" or cont.upper() == "Y":
     cont = input("Do you want to continue? (y/n)") #Continue loop
     if cont == "n":
         break
-    
